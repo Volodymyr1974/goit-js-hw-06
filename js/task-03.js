@@ -15,7 +15,7 @@ const images = [
 
 const itemEl = images
   .map(({ url, alt }) => `<li >
-  <img src = '${url}' alt = '${alt}' width="320"> </li>`)
+  <img src = '${url}' alt = '${alt}' width="320" height = "200"> </li>`)
   .join("");
 
 
@@ -26,6 +26,8 @@ galleryEl.insertAdjacentHTML('beforeend', itemEl);
 galleryEl.style.display = "flex";
 galleryEl.style.listStyle = "none";
 galleryEl.style.alignItems = "center";
+galleryEl.style.padding = "0";
+galleryEl.style.margin = "0";
 
 const imgmEl = galleryEl.querySelectorAll("li");
 imgmEl.forEach((item) => {
